@@ -1,0 +1,99 @@
+
+/* ===== TIPOGRAFÍA (Google Fonts) ===== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Tenor+Sans&display=swap');
+ 
+/* ===== BASE / RESET ===== */
+html {
+    font-size: 62.5%;
+}
+ 
+body {
+    background-color: #FFF4EA;
+}
+ 
+/* ===== HEADER ===== */
+header {
+    color: #FFF4EA;
+    background-color: #9FAD9F;
+}
+ 
+header a {
+    color: #FFF4EA;
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+}
+ 
+/* ===== TIPOGRAFÍA GENERAL (tamaños y familias) ===== */
+p, a, button, label, select {
+    font-size: 2.5rem;
+}
+ 
+h1, h2, h3, h4, button, input {
+    font-family: "Tenor Sans", sans-serif;
+}
+ 
+h1 {
+    font-size: 6rem;
+    font-weight: 800;
+}
+ 
+h2 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+ 
+h3 {
+    text-align: center;
+    font-size: 3rem;
+}
+ 
+p, label, select {
+    font-family: "DM Sans", sans-serif;
+}
+ 
+/* ===== LISTAS ===== */
+ul {
+    list-style: none;
+}
+ 
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    color: #414D4A;
+}
+ 
+/* ===== UTILIDADES DE ALINEACIÓN ===== */
+.txtaladerecha {
+    text-align: end;
+}
+ 
+.txtcentro {
+    text-align: center;
+}
+ 
+/* ===== BOTONES ===== */
+.btn {
+    background-color: #E8B5A7;
+    color: #FFF4EA;
+}
+ 
+button {
+    background-color: #E8B5A7;
+    color: #FFF4EA;
+}
+ 
+.newletterenviar {
+    background-color: #E8B5A7;
+    color: #FFF4EA;
+}
+ 
+/* ===== FORMULARIO DE CONTACTO ===== */
+.formulariocontacto label {
+    color: #414D4A;
+}
+ 
+/* ===== FOOTER ===== */
+footer {
+    background-color: #9FAD9F;
+    color: #FFF4EA;
+}
+ 
