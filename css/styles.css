@@ -2,6 +2,12 @@
 /* ===== TIPOGRAFÍA (Google Fonts) ===== */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Tenor+Sans&display=swap');
  
+/* ===== RESET GLOBAL (BOX MODEL) ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* ===== BASE / RESET ===== */
 html {
     font-size: 62.5%;
@@ -12,17 +18,91 @@ body {
 }
  
 /* ===== HEADER ===== */
-header {
-    color: #FFF4EA;
-    background-color: #9FAD9F;
-}
  
 header a {
     color: #FFF4EA;
     text-decoration: none;
     font-family: "DM Sans", sans-serif;
 }
- 
+ /* ===== HEADER / NAVBAR (FLEXBOX) ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: #414D4A;
+    background-color: #9FAD9F;
+}
+
+.nav-lista {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+/* ===== BANNER ===== */
+.banner {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ===== SECCIONES (ESPACIADO) ===== */
+.seccion {
+    padding: 40px 20px;
+    margin-bottom: 60px;
+}
+
+/* ===== TARJETAS DE CORTES (FLEXBOX) ===== */
+.cortes-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.corte-card {
+    padding: 20px;
+    background-color: #FFF4EA;
+}
+
+.corte-card img {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #9FAD9F;
+    color: #FFF4EA;
+}
+/* ===== FOOTER - REDES SOCIALES ===== */
+footer a {
+    text-decoration: none;
+    color: #FFF4EA;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+footer nav ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 /* ===== TIPOGRAFÍA GENERAL (tamaños y familias) ===== */
 p, a, button, label, select {
     font-size: 2.5rem;
@@ -89,11 +169,5 @@ button {
 /* ===== FORMULARIO DE CONTACTO ===== */
 .formulariocontacto label {
     color: #414D4A;
-}
- 
-/* ===== FOOTER ===== */
-footer {
-    background-color: #9FAD9F;
-    color: #FFF4EA;
 }
  
