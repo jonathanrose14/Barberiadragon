@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <header>
-        <div>
+   <header class="header">
+        <div class="header-logo">
             <a href="../index.html">
                 <h1>Dragon barber club</h1>
             </a>
             <p>La barberia del momento</p>
         </div>
-        <nav>
-            <ul>
+         <nav class="nav">
+            <ul class="nav-lista">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="./ofertas.html">Ofertas</a></li>
@@ -28,32 +28,34 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="seccion">
             <h2 class="txtcentro">Algunos cortes</h2>
-            <article>
-                <h3>Moicano</h3>
-                <figure>
-                    <img src="../assets/moicano.png" alt="Corte de dama finalizado estilo moicano" />
-                    <figcaption>Mujer luciendo un corte de cabello finalizado estilo moicano en barberia </figcaption>
-                </figure>
-
-            </article>
-            <article>
-                <h3>Cresta en punta marcada</h3>
-                <figure>
-                    <img src="../assets/cresta.png"
-                        alt="corte de caballero finalizado, muestra  media cresta con linea en v" />
-                    <figcaption>Hombre luciendo un corte de cabello finalizado estilo Cresta con terminacion v en
-                        barberia </figcaption>
-                </figure>
-            </article>
-            <article>
+            <div class="cortes-contenedor">
+                <article class="corte-card">
+                    <h3>Moicano</h3>
+                    <figure>
+                        <img src="../assets/moicano.png" alt="Corte de dama finalizado estilo moicano" />
+                        <figcaption>Mujer luciendo un corte de cabello finalizado estilo moicano en barberia
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="corte-card">
+                    <h3>Cresta en punta marcada</h3>
+                    <figure>
+                        <img src="../assets/cresta.png"
+                            alt="corte de caballero finalizado, muestra  media cresta con linea en v" />
+                        <figcaption>Hombre luciendo un corte de cabello finalizado estilo Cresta con terminacion v en
+                            barberia </figcaption>
+                    </figure>
+                </article>
+            <article class="corte-card">
                 <h3>fade</h3>
                 <figure>
                     <img src="../assets/midfade.png" alt="corte de caballero finalizado muestra un mid fade" />
                     <figcaption>Hombre luciendo un corte de cabello finalizado estilo Mid fade en barberia </figcaption>
                 </figure>
             </article>
+            </div>
         </section>
     </main>
     <footer>
