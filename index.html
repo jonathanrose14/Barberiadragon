@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <div class="header-logo">
             <a href="#">
                 <h1>Dragon barber club</h1>
             </a>
             <p>La barberia del momento</p>
         </div>
-        <nav>
-            <ul>
+        <nav class="nav">
+            <ul class="nav-lista">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="./pages/menu.html">Menu</a></li>
                 <li><a href="./pages/ofertas.html">Ofertas</a></li>
@@ -28,7 +28,7 @@
         </nav>
     </header>
     <main>
-        <div>
+        <div class="banner">
             <img src="./assets/Banner.jpg"
                 alt="Interior de una barbería de estilo vintage con tres sillones de barbero de cuero negro, espejos grandes y una pared de ladrillo visto.">
         </div>
@@ -41,33 +41,39 @@
                     referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
         </section>
-        <section>
+        <section class="seccion">
             <div>
                 <h2 class="txtcentro">Los cortes mas aclamados por los clientes</h2>
             </div>
-            <article>
-                <h3>Moicano</h3>
-                <figure>
-                    <img src="./assets/moicano.png" alt="Corte de dama finalizado estilo moicano" />
-                    <figcaption>Mujer luciendo un corte de cabello finalizado estilo moicano en barberia </figcaption>
-                </figure>
-            </article>
-            <article>
-                <h3>Cresta en punta marcada</h3>
-                <figure>
-                    <img src="./assets/cresta.png"
-                        alt="corte de caballero finalizado, muestra  media cresta con linea en v" />
-                    <figcaption>Hombre luciendo un corte de cabello finalizado estilo Cresta con terminacion v en
-                        barberia </figcaption>
-                </figure>
-            </article>
-            <article>
-                <h3>fade</h3>
-                <figure>
-                    <img src="./assets/midfade.png" alt="corte de caballero finalizado muestra un mid fade" />
-                    <figcaption>Hombre luciendo un corte de cabello finalizado estilo Mid fade en barberia </figcaption>
-                </figure>
-            </article>
+            <div class="cortes-contenedor">
+                <article class="corte-card">
+                    <h3>Moicano</h3>
+                    <figure>
+                        <img src="./assets/moicano.png" alt="Corte de dama finalizado estilo moicano" />
+                        <figcaption>Mujer luciendo un corte de cabello finalizado estilo moicano en barberia
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="corte-card">
+                    <h3>Cresta en punta marcada</h3>
+                    <figure>
+                        <img src="./assets/cresta.png"
+                            alt="corte de caballero finalizado, muestra  media cresta con linea en v" />
+                        <figcaption>Hombre luciendo un corte de cabello finalizado estilo Cresta con terminacion v en
+                            barberia </figcaption>
+                    </figure>
+                </article>
+
+
+                <article class="corte-card">
+                    <h3>fade</h3>
+                    <figure>
+                        <img src="./assets/midfade.png" alt="corte de caballero finalizado muestra un mid fade" />
+                        <figcaption>Hombre luciendo un corte de cabello finalizado estilo Mid fade en barberia
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
         </section>
         <div>
             <h2>Video conceptual de la barberia</h2>
@@ -77,7 +83,7 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         <p>Texto copyright</p>
         <h2>Suscribite al newsletter</h2>
         <form action="">
@@ -99,5 +105,4 @@
         </nav>
     </footer>
 </body>
-
 </html>
