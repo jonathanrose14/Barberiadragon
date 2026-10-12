@@ -21,35 +21,66 @@ html {
     --h3-size: clamp(2rem, 1.6rem + 1vw, 3rem);
 }
 
+/* Bootstrap usa rem: con el 62.5% hay que fijar el tamaño base del body */
 body {
     background-color: #FFF4EA;
+    font-size: var(--texto-size);
 }
 
-/* ===== HEADER / NAVBAR (MOBILE: apilado) ===== */
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    text-align: center;
-    color: #414D4A;
+/* ===== NAVBAR (Bootstrap con estilo propio) ===== */
+.navbar-dragon {
+    padding: 1.5rem 2rem;
     background-color: #9FAD9F;
 }
 
-header a {
-    color: #FFF4EA;
-    text-decoration: none;
+.navbar-dragon .navbar-brand {
+    white-space: normal;
+    color: #414D4A;
     font-family: "DM Sans", sans-serif;
+    transition: color 0.3s ease;
 }
 
-.nav-lista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px 30px;
-    list-style: none;
+.navbar-dragon .navbar-brand:hover {
+    color: #FFF4EA;
+}
+
+.navbar-brand__titulo {
+    font-size: var(--h2-size);
+}
+
+.navbar-brand__lema {
+    font-size: var(--texto-size);
+}
+
+.navbar-dragon .navbar-nav .nav-link {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    color: #414D4A;
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--texto-size);
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* link de la página actual */
+.navbar-dragon .navbar-nav .nav-link.active {
+    color: #414D4A;
+    font-weight: 700;
+}
+
+/* estados interactivos (orden: hover, focus, active) */
+.navbar-dragon .navbar-nav .nav-link:hover {
+    color: #FFF4EA;
+    background-color: #414D4A;
+}
+
+.navbar-dragon .navbar-nav .nav-link:focus {
+    color: #FFF4EA;
+    background-color: #414D4A;
+    outline: 2px solid #E8B5A7;
+}
+
+.navbar-dragon .navbar-nav .nav-link:active {
+    transform: scale(0.96);
 }
 
 /* ===== INDEX: GRID MAESTRO DEL MAIN (MOBILE: 1 columna) ===== */
@@ -139,12 +170,35 @@ header a {
 .corte-card {
     padding: 20px;
     background-color: #FFF4EA;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .corte-card img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+/* estados interactivos de las tarjetas */
+.corte-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(65, 77, 74, 0.25);
+}
+
+.corte-card:active {
+    transform: translateY(-2px);
+}
+
+/* ===== GALERÍA (carousel de Bootstrap) ===== */
+.galeria__img {
+    height: 40rem;
+    object-fit: contain;
+    background-color: #414D4A;
+}
+
+.galeria__caption {
+    background-color: rgba(65, 77, 74, 0.75);
+    border-radius: 0.5rem;
 }
 
 /* ===== PÁGINA OFERTAS: GRID (MOBILE: 1 columna) ===== */
@@ -236,6 +290,8 @@ header a {
     width: 100%;
     padding: 10px;
     font-size: var(--texto-size);
+    border: 2px solid #9FAD9F;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formulariocontacto textarea {
@@ -246,6 +302,21 @@ header a {
 .formulariocontacto input[type="submit"] {
     width: auto;
     padding: 10px 30px;
+}
+
+/* estados interactivos de los campos */
+.formulariocontacto input:hover,
+.formulariocontacto textarea:hover,
+.formulariocontacto select:hover {
+    border-color: #414D4A;
+}
+
+.formulariocontacto input:focus,
+.formulariocontacto textarea:focus,
+.formulariocontacto select:focus {
+    border-color: #E8B5A7;
+    outline: none;
+    box-shadow: 0 0 0 0.3rem rgba(232, 181, 167, 0.6);
 }
 
 /* ===== FOOTER ===== */
@@ -266,6 +337,7 @@ footer a {
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
 footer nav ul {
@@ -273,6 +345,20 @@ footer nav ul {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+/* estados interactivos de los links del footer */
+footer a:hover {
+    opacity: 0.7;
+}
+
+footer a:focus {
+    outline: 2px solid #E8B5A7;
+}
+
+footer a:active {
+    opacity: 1;
+    transform: scale(0.95);
 }
 
 /* ===== TIPOGRAFÍA GENERAL (tamaños y familias) ===== */
@@ -334,19 +420,101 @@ main {
 }
 
 /* ===== BOTONES ===== */
-.btn {
-    background-color: #E8B5A7;
-    color: #FFF4EA;
-}
-
 button {
     background-color: #E8B5A7;
     color: #FFF4EA;
 }
 
-.newletterenviar {
+/* Variables de Bootstrap con la paleta propia (así no se pisan los estados) */
+.btn-dragon {
+    --bs-btn-color: #FFF4EA;
+    --bs-btn-bg: #E8B5A7;
+    --bs-btn-border-color: #E8B5A7;
+    --bs-btn-hover-color: #FFF4EA;
+    --bs-btn-hover-bg: #414D4A;
+    --bs-btn-hover-border-color: #414D4A;
+    --bs-btn-active-color: #FFF4EA;
+    --bs-btn-active-bg: #414D4A;
+    --bs-btn-active-border-color: #414D4A;
+    font-family: "Tenor Sans", sans-serif;
+    font-size: var(--texto-size);
+}
+
+.btn-dragon,
+.newletterenviar,
+.formulariocontacto input[type="submit"] {
     background-color: #E8B5A7;
     color: #FFF4EA;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* estados interactivos de los botones */
+.btn-dragon:hover,
+.newletterenviar:hover,
+.formulariocontacto input[type="submit"]:hover {
+    background-color: #414D4A;
+    color: #FFF4EA;
+}
+
+.btn-dragon:focus,
+.newletterenviar:focus,
+.formulariocontacto input[type="submit"]:focus {
+    box-shadow: 0 0 0 0.3rem rgba(65, 77, 74, 0.5);
+}
+
+.btn-dragon:active,
+.newletterenviar:active,
+.formulariocontacto input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+/* ===== Card de ofertas (Bootstrap con paleta propia) ===== */
+.card-oferta {
+    background-color: #FFF4EA;
+    border: 1px solid #9FAD9F;
+    color: #414D4A;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-oferta .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card-oferta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(65, 77, 74, 0.25);
+}
+
+.card-oferta:active {
+    transform: translateY(-2px);
+}
+
+/* ===== Modal (Bootstrap con paleta propia) ===== */
+.modal-dragon {
+    background-color: #FFF4EA;
+    color: #414D4A;
+    border: 2px solid #9FAD9F;
+}
+
+.modal-dragon .modal-header,
+.modal-dragon .modal-body,
+.modal-dragon .modal-footer {
+    padding: 2rem;
+    border-color: #9FAD9F;
+}
+
+.modal-dragon .modal-title {
+    text-align: left;
+}
+
+.formulariocontacto input:focus:invalid,
+.formulariocontacto textarea:focus:invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.3rem rgba(220, 53, 69, 0.4);
 }
 
 /* ===== TABLET (768px) ===== */
@@ -362,13 +530,6 @@ button {
 
 /* ===== DESKTOP (1024px) ===== */
 @media (min-width: 1024px) {
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px 40px;
-        text-align: left;
-    }
-
     .grid-principal {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-areas:
